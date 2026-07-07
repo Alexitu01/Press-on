@@ -1,0 +1,15 @@
+/Users/alexholst/Desktop/Press-on/bin/Debug/net9.0/Press-on
+/Users/alexholst/Desktop/Press-on/bin/Debug/net9.0/Press-on.deps.json
+/Users/alexholst/Desktop/Press-on/bin/Debug/net9.0/Press-on.runtimeconfig.json
+/Users/alexholst/Desktop/Press-on/bin/Debug/net9.0/Press-on.dll
+/Users/alexholst/Desktop/Press-on/bin/Debug/net9.0/Press-on.pdb
+/Users/alexholst/Desktop/Press-on/obj/Debug/net9.0/Press-on.GeneratedMSBuildEditorConfig.editorconfig
+/Users/alexholst/Desktop/Press-on/obj/Debug/net9.0/Press-on.AssemblyInfoInputs.cache
+/Users/alexholst/Desktop/Press-on/obj/Debug/net9.0/Press-on.AssemblyInfo.cs
+/Users/alexholst/Desktop/Press-on/obj/Debug/net9.0/Press-on.csproj.CoreCompileInputs.cache
+/Users/alexholst/Desktop/Press-on/obj/Debug/net9.0/Press-on.sourcelink.json
+/Users/alexholst/Desktop/Press-on/obj/Debug/net9.0/Press-on.dll
+/Users/alexholst/Desktop/Press-on/obj/Debug/net9.0/refint/Press-on.dll
+/Users/alexholst/Desktop/Press-on/obj/Debug/net9.0/Press-on.pdb
+/Users/alexholst/Desktop/Press-on/obj/Debug/net9.0/Press-on.genruntimeconfig.cache
+/Users/alexholst/Desktop/Press-on/obj/Debug/net9.0/ref/Press-on.dll
