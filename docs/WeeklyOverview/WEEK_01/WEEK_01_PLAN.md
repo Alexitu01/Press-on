@@ -81,13 +81,14 @@ Focus:
 
 Tasks:
 
-- 
-- 
-- 
+- Read and understand Local, development, production and environment variables.
+- Understand and implement appsettings.json 
+- Make Environment_Notes.md to explain: config, connection string, ports and commit rules.
 
 Deliverable:
 
 Estimated time:
+2-3 hours
 
 ---
 
