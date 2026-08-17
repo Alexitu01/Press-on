@@ -2,21 +2,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Press-on</title>
-    <script type="importmap"></script>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/app.styles.css" asp-append-version="true" />
 </head>
-<header class="header">
-    <div class="items">
-        <img src="imgs/burger.png" class="burger">
-        <div class="side-options">
-            <h3 class="currency"> € (euro)</h3 >
-            <h3 class = "info">info</h3>
-            <button class="goToCart"><img src="imgs/cart.png" class="cart"></button>
-        </div>
-    </div>
-</header>
-<main role="main" class="pb-3">
+
+<partial name="_Header"/>
+
+<body role="main" class="pb-3">
     @RenderBody()
-</main>
+</body>
