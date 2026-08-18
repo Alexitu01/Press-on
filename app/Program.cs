@@ -5,6 +5,11 @@ builder.Services.AddRazorPages();
 
 var app = builder.Build();
 
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+
+Console.WriteLine(connectionString is null ? "Didn't work" : "Did work!");
+
+
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
