@@ -1,5 +1,24 @@
-﻿@page 
+﻿@page
 @model IndexModel
 
-
+<head>
+    <stylesheet rel="stylesheet" href="~/css/site.css" />
+</head>
+@foreach (var product in Model.productList)
+{
+    <div class="product">
+        <div class="info">
+            Name: @product.Name
+        </div>
+        <br />
+        <div class="info">
+            Price: @product.Price$
+        </div>
+        <br />
+        <div class="info">
+            Sets left: @product.Quantity
+        </div>
+        <img src=@product.ImageUrl/>
+    </div>
+}
 
