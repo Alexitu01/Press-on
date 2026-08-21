@@ -1,24 +1,10 @@
 ﻿@page
 @model IndexModel
 
-<head>
-    <stylesheet rel="stylesheet" href="~/css/site.css" />
-</head>
+
 @foreach (var product in Model.productList)
 {
-    <div class="product">
-        <div class="product_name">
-            Name: @product.Name
-        </div>
-        <br />
-        <div class="product_price">
-            Price: @product.Price€
-        </div>
-        <br />
-        <div class="product_quantity">
-            Sets left: @product.Quantity
-        </div>
-        <img src=@product.ImageUrl/>
-    </div>
+    @await Html.PartialAsync("_ProductPartial", product)
 }
+
 

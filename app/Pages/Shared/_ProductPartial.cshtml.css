@@ -1,0 +1,85 @@
+.product{
+  position: relative;
+  background-color: rgba(236, 221, 221, 0.691);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.398);
+  width:300px;
+  height:400px;
+  margin: 10px;
+  border-radius: 10px;
+  border-style:solid;
+  border-width: 1px;
+  border-color: rgba(155, 141, 141, 0.487);
+}
+
+.product:hover{
+  cursor:pointer;
+  opacity: 0.9;
+}
+
+.product_image{
+  position: absolute;
+  display:flex;
+  left: 50%;
+  top: 35%;
+  transform: translate(-50%, -50%);
+  justify-content:center;
+  align-items:center;
+  width:100%;
+  height:280px;
+  border-radius: 10px;
+  background-color:rgba(255, 255, 255, 0.733);
+  
+}
+
+.product_image:nth-child(1) {
+  clip-path: ellipse(650px 100% at top);
+}
+
+
+.product_image img{
+  width: 250px;
+  height: 250px;
+  border-radius:10px;
+}
+
+.product_info{
+  display:flex;
+  flex-direction:column;
+  position: absolute;
+  left: 50%;
+  top: 85%;
+  transform: translate(-50%, -50%);
+  justify-content:space-between;
+  align-items:center;
+  height: 90px;
+  width: 100%;
+  
+}
+
+.product_name{
+  font-family: "Montserrat", sans-serif;
+  font-size:20px;
+  color: rgba(0, 0, 0, 0.912);
+  font-weight: 380;
+  letter-spacing: 1px;
+
+}
+
+.heart svg{
+  margin: 0px;
+  padding: 0px;
+  height: 20px;
+  fill:rgb(222, 165, 175);
+}
+
+.heart{
+  color: rgb(222, 165, 175);
+}
+
+
+
+.product_price{
+  font-size:20px;
+  font-family:'Times New Roman', Times, serif;
+  color:rgb(222, 165, 175);
+}
