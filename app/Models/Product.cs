@@ -2,11 +2,11 @@ using System.Security.Cryptography.X509Certificates;
 namespace Models;
 public class Product
 {
-    public int Id {get; set;}
+    public required int Id {get; set;}
 
     public required string Name {get; set;}
     
-    public double Price {get; set;}
+    public required double Price {get; set;}
 
     public int Quantity {get; set;}
 
