@@ -1,10 +1,14 @@
 ﻿@page
 @model IndexModel
 
-
-@foreach (var product in Model.productList)
-{
-    @await Html.PartialAsync("_ProductPartial", product)
-}
+<div class="popular_products_container">
+    <h1 class="popular_products_title">Popular Products</h1>
+    <div class="popular_products">
+        @foreach (var product in Model.productList)
+        {
+            @await Html.PartialAsync("_ProductPartial", product)
+        }
+    </div>
+</div>
 
 
