@@ -7,15 +7,15 @@
 @foreach (var product in Model.productList)
 {
     <div class="product">
-        <div class="info">
+        <div class="product_name">
             Name: @product.Name
         </div>
         <br />
-        <div class="info">
-            Price: @product.Price$
+        <div class="product_price">
+            Price: @product.Price€
         </div>
         <br />
-        <div class="info">
+        <div class="product_quantity">
             Sets left: @product.Quantity
         </div>
         <img src=@product.ImageUrl/>
