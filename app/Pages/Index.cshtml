@@ -4,11 +4,67 @@
 <div class="popular_products_container">
     <h1 class="popular_products_title">Popular Products</h1>
     <div class="popular_products">
+        <button class="prev"><img src="imgs/arrow.png" /></button>
         @foreach (var product in Model.productList)
         {
             @await Html.PartialAsync("_ProductPartial", product)
         }
+        <button class="next"><img src="imgs/arrow.png" /></button>
     </div>
 </div>
 
 
+
+<script>
+    const slider = document.querySelectorAll('.product');
+    const next = document.querySelector('.next');
+    const prev = document.querySelector('.prev');
+    let currItem = 1;
+    function sliderShow(){
+        slider[currItem].style.transform = 'translate(0)'
+        slider[currItem].style.zIndex = '10';
+        slider[currItem].style.filter = "none";
+        slider[currItem].style.opacity = "1";
+        slider[currItem].style.pointerEvent = "auto";
+        slider[currItem].style.cursor ="pointer";
+
+
+        let counter = 0;
+        for (i = currItem + 1; i < slider.length; i++) {
+            counter++;
+            slider[i].style.transform = `translate(${200 * counter}px, -5%) scale(${1 - 0.2 * counter}) perspective(20px) rotateY(-1deg)`;
+            slider[i].style.zIndex = 4 - counter;
+            slider[i].style.opacity = counter > 2 ? 0 : counter > 1 ? 0.8 : 0.9;
+            slider[i].style.filter = "brightness(90%)";
+            slider[i].style.pointerEvent ="none";
+            slider[i].style.cursor ="default";
+        }
+
+        counter = 0;
+        for (i = currItem - 1; i >= 0; i--) {
+            counter++;
+            slider[i].style.transform = `translate(${-200 * counter}px, -5%) scale(${1 - 0.2 * counter}) perspective(20px) rotateY(1deg)`;
+            slider[i].style.zIndex = 4 - counter;
+            slider[i].style.opacity = counter > 2 ? 0 : counter > 1 ? 0.5 : 0.7;
+            slider[i].style.filter = "brightness(90%)";
+            slider[i].style.pointerEvent ="none";
+            slider[i].style.cursor ="default";
+        }
+    }
+
+    sliderShow();
+
+    next.onclick = () => {
+        if(currItem != 2){
+            currItem++;
+            sliderShow();
+        }
+    };
+
+    prev.onclick = () => {
+         if(currItem != 0){
+            currItem--;
+            sliderShow();
+        }
+    };
+</script>

@@ -40,14 +40,58 @@ body {
 }
 
 .popular_products{
+  position:relative;
   display:flex;
   flex-direction:row;
   justify-content:center;
   align-items:center;
   margin-top:20px;
-  width: 1200px;
+  width: 80%;
   height: 500px;
   background-color: rgba(236, 221, 221, 0.691);
   border-radius: 10px;
+  overflow:hidden;
 }
 
+.next, .prev{
+  position:absolute;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width:100px;
+  height:100px;
+  border-radius:50%;
+  border-style:none;
+  color:pink;
+  z-index:999;
+}
+
+.next{
+  right: 15px;
+}
+
+.prev{
+  left: 15px;
+}
+.next:hover, .prev:hover{
+  background-color:rgba(255, 255, 255, 0.596);
+  border-style:solid;
+  border-width:1px;
+  border-color:rgb(236, 221, 221)
+}
+
+button:active{
+  scale:0.9;
+}
+
+.next img{
+  width:50px;
+  height:50px;
+}
+
+.prev img{
+  width:50px;
+  height:50px;
+  transform:rotate(180deg);
+  color:pink;
+}
