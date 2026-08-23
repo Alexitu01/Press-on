@@ -45,13 +45,13 @@
             Hi, my name is Rebekka, and I’ve always had a big love for beautiful nails and all the little details that
             can make them feel special.
 
-            I started doing my own gel polish nails around 8 years ago, mostly because I loved 
-            experimenting with different colors, designs, and ideas. Since then, life has changed, 
+            I started doing my own gel polish nails around 8 years ago, mostly because I loved
+            experimenting with different colors, designs, and ideas. Since then, life has changed,
             but one thing that has always stayed with me is my love for design, art, and creating
             something beautiful with my hands.
 
             In 2024, I decided to try something new and started exploring press-on nails. The idea actually came from
-            wanting to share my nail designs with friends who live far away. 
+            wanting to share my nail designs with friends who live far away.
 
             And, as it turns out, I completely fell in love with it.
 
@@ -74,57 +74,85 @@
 </div>
 
 
+<div class="seperator"></div>
 
-<script>
-    const slider = document.querySelectorAll('.product');
-    const next = document.querySelector('.next');
-    const prev = document.querySelector('.prev');
-    let currItem = 1;
-    function sliderShow() {
-        slider[currItem].style.transform = 'translate(0)'
-        slider[currItem].style.zIndex = '10';
-        slider[currItem].style.filter = "none";
-        slider[currItem].style.opacity = "1";
-        slider[currItem].style.pointerEvent = "auto";
-        slider[currItem].style.cursor = "pointer";
+<div class="bottom-section">
+    <div class="press_on_socials">
+        <img class="nails_by" src="imgs/small_logo.png" />
+        <div class="socials">
+            <a href="https://www.instagram.com/keep_pressing_on_nails/"> <img class="instagram" src="imgs/instagram.png" /> </a>
+                <a href="https://www.tiktok.com/@@press0n"> <img class="tiktok" src="imgs/tik-tok.png" /> </a>
+        </div>
+    </div>
+    <div class="quick_menu">
+        <div class="help">
+            <p>Help</p>
+              <ul>
+                <li>Size guide</li>
+                <li>Contact</li>
+            </ul>
+        </div>
+        <div class="shop">
+            <p>Shop</p>
+            <ul>
+                <li>Made to order</li>
+                <li>Ready to ship</li>
+                <li>Application kit</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <script>
+        const slider = document.querySelectorAll('.product');
+        const next = document.querySelector('.next');
+        const prev = document.querySelector('.prev');
+        let currItem = 1;
+        function sliderShow() {
+            slider[currItem].style.transform = 'translate(0)'
+            slider[currItem].style.zIndex = '10';
+            slider[currItem].style.filter = "none";
+            slider[currItem].style.opacity = "1";
+            slider[currItem].style.pointerEvent = "auto";
+            slider[currItem].style.cursor = "pointer";
 
 
-        let counter = 0;
-        for (i = currItem + 1; i < slider.length; i++) {
-            counter++;
-            slider[i].style.transform = `translate(${150 * counter}px, -5%) scale(${1 - 0.2 * counter}) perspective(20px) rotateY(-1deg)`;
-            slider[i].style.zIndex = 4 - counter;
-            slider[i].style.opacity = counter > 2 ? 0 : counter > 1 ? 0.8 : 0.9;
-            slider[i].style.filter = "brightness(90%)";
-            slider[i].style.pointerEvent = "none";
-            slider[i].style.cursor = "default";
+            let counter = 0;
+            for (i = currItem + 1; i < slider.length; i++) {
+                counter++;
+                slider[i].style.transform = `translate(${150 * counter}px, -5%) scale(${1 - 0.2 * counter}) perspective(20px) rotateY(-1deg)`;
+                slider[i].style.zIndex = 4 - counter;
+                slider[i].style.opacity = counter > 2 ? 0 : counter > 1 ? 0.8 : 0.9;
+                slider[i].style.filter = "brightness(90%)";
+                slider[i].style.pointerEvent = "none";
+                slider[i].style.cursor = "default";
+            }
+
+            counter = 0;
+            for (i = currItem - 1; i >= 0; i--) {
+                counter++;
+                slider[i].style.transform = `translate(${-150 * counter}px, -5%) scale(${1 - 0.2 * counter}) perspective(20px) rotateY(1deg)`;
+                slider[i].style.zIndex = 4 - counter;
+                slider[i].style.opacity = counter > 2 ? 0 : counter > 1 ? 0.5 : 0.7;
+                slider[i].style.filter = "brightness(90%)";
+                slider[i].style.pointerEvent = "none";
+                slider[i].style.cursor = "default";
+            }
         }
 
-        counter = 0;
-        for (i = currItem - 1; i >= 0; i--) {
-            counter++;
-            slider[i].style.transform = `translate(${-150 * counter}px, -5%) scale(${1 - 0.2 * counter}) perspective(20px) rotateY(1deg)`;
-            slider[i].style.zIndex = 4 - counter;
-            slider[i].style.opacity = counter > 2 ? 0 : counter > 1 ? 0.5 : 0.7;
-            slider[i].style.filter = "brightness(90%)";
-            slider[i].style.pointerEvent = "none";
-            slider[i].style.cursor = "default";
-        }
-    }
+        sliderShow();
 
-    sliderShow();
+        next.onclick = () => {
+            if (currItem != 2) {
+                currItem++;
+                sliderShow();
+            }
+        };
 
-    next.onclick = () => {
-        if (currItem != 2) {
-            currItem++;
-            sliderShow();
-        }
-    };
-
-    prev.onclick = () => {
-        if (currItem != 0) {
-            currItem--;
-            sliderShow();
-        }
-    };
-</script>
+        prev.onclick = () => {
+            if (currItem != 0) {
+                currItem--;
+                sliderShow();
+            }
+        };
+    </script>
