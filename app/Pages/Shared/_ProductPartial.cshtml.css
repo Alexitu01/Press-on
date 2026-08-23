@@ -1,9 +1,11 @@
 .product{
   position:absolute;
+  display:flex;
+  justify-content:center;
   background-color: rgb(236, 221, 221);
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.398);
-  width:300px;
-  height:400px;
+  width:200px;
+  height:300px;
   margin: 10px;
   border-radius: 10px;
   border-style:solid;
@@ -18,28 +20,24 @@
 }
 
 .product_image{
-  position: absolute;
   display:flex;
-  left: 50%;
-  top: 35%;
-  transform: translate(-50%, -50%);
   justify-content:center;
   align-items:center;
   width:100%;
-  height:280px;
+  height:200px;
   border-radius: 10px;
   background-color:rgba(255, 255, 255, 0.733);
   
 }
 
 .product_image:nth-child(1) {
-  clip-path: ellipse(650px 100% at top);
+  clip-path: ellipse(400px 100% at top);
 }
 
 
 .product_image img{
-  width: 250px;
-  height: 250px;
+  width: 150px;
+  height: 150px;
   border-radius:10px;
 }
 

@@ -2,7 +2,7 @@
 @model IndexModel
 
 <div class="popular_products_container">
-    <h1 class="popular_products_title">Popular Products</h1>
+    <h2 class="popular_products_title">Popular Products</h2>
     <div class="popular_products">
         <button class="prev"><img src="imgs/arrow.png" /></button>
         @foreach (var product in Model.productList)
@@ -13,6 +13,29 @@
     </div>
 </div>
 
+<div class="guide-area">
+    <div class="guide">
+        <h2>Don't know where to start?</h2>
+        <div class="steps">
+            <div class="step">
+                <img src="imgs/measure.png" />
+                <h4> Find your perfect size</h4>
+                <p> Take a look at the size chart and the measuring guide to find your perfect fit </p>
+            </div>
+            <div class="step">
+                <img src="imgs/to-order.png" />
+                <h4> Made to order</h4>
+                <p>Choose from a list of designs and customize the size to fit you perfectly.</p>
+            </div>
+            <div class="step">
+                <img src="imgs/nail2.png" />
+                <h4> Ready to ship</h4>
+                <p>Nail sets ranging form size XS-XL ready to ship to you in just a click.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 
 <script>
@@ -20,49 +43,49 @@
     const next = document.querySelector('.next');
     const prev = document.querySelector('.prev');
     let currItem = 1;
-    function sliderShow(){
+    function sliderShow() {
         slider[currItem].style.transform = 'translate(0)'
         slider[currItem].style.zIndex = '10';
         slider[currItem].style.filter = "none";
         slider[currItem].style.opacity = "1";
         slider[currItem].style.pointerEvent = "auto";
-        slider[currItem].style.cursor ="pointer";
+        slider[currItem].style.cursor = "pointer";
 
 
         let counter = 0;
         for (i = currItem + 1; i < slider.length; i++) {
             counter++;
-            slider[i].style.transform = `translate(${200 * counter}px, -5%) scale(${1 - 0.2 * counter}) perspective(20px) rotateY(-1deg)`;
+            slider[i].style.transform = `translate(${150 * counter}px, -5%) scale(${1 - 0.2 * counter}) perspective(20px) rotateY(-1deg)`;
             slider[i].style.zIndex = 4 - counter;
             slider[i].style.opacity = counter > 2 ? 0 : counter > 1 ? 0.8 : 0.9;
             slider[i].style.filter = "brightness(90%)";
-            slider[i].style.pointerEvent ="none";
-            slider[i].style.cursor ="default";
+            slider[i].style.pointerEvent = "none";
+            slider[i].style.cursor = "default";
         }
 
         counter = 0;
         for (i = currItem - 1; i >= 0; i--) {
             counter++;
-            slider[i].style.transform = `translate(${-200 * counter}px, -5%) scale(${1 - 0.2 * counter}) perspective(20px) rotateY(1deg)`;
+            slider[i].style.transform = `translate(${-150 * counter}px, -5%) scale(${1 - 0.2 * counter}) perspective(20px) rotateY(1deg)`;
             slider[i].style.zIndex = 4 - counter;
             slider[i].style.opacity = counter > 2 ? 0 : counter > 1 ? 0.5 : 0.7;
             slider[i].style.filter = "brightness(90%)";
-            slider[i].style.pointerEvent ="none";
-            slider[i].style.cursor ="default";
+            slider[i].style.pointerEvent = "none";
+            slider[i].style.cursor = "default";
         }
     }
 
     sliderShow();
 
     next.onclick = () => {
-        if(currItem != 2){
+        if (currItem != 2) {
             currItem++;
             sliderShow();
         }
     };
 
     prev.onclick = () => {
-         if(currItem != 0){
+        if (currItem != 0) {
             currItem--;
             sliderShow();
         }
