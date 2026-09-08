@@ -1,0 +1,158 @@
+.product-carousel{
+  position:relative;
+  display:flex;
+  flex-direction:row;
+  justify-content:center;
+  align-items:center;
+  margin-top:20px;
+  width: 80%;
+  min-width: 900px;
+  max-width: 1300px;
+  height: 400px;
+  background-color:rgba(255, 230, 230, 0.58);
+  border-radius: 10px;
+  overflow:hidden;
+}
+
+.next, .prev{
+  position:absolute;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width: 80px;
+  height:80px;
+  border-radius:50%;
+  border-style:none;
+  color:pink;
+  z-index:999;
+}
+
+.next{
+  right: 15px;
+}
+
+.prev{
+  left: 15px;
+}
+.next:hover, .prev:hover{
+  background-color:rgba(255, 255, 255, 0.596);
+  border-style:solid;
+  border-width:1px;
+  border-color:rgb(236, 221, 221)
+}
+
+button:active{
+  scale:0.9;
+}
+
+.next img{
+  width:50px;
+  height:50px;
+}
+
+.prev img{
+  width:50px;
+  height:50px;
+  transform:rotate(180deg);
+  color:pink;
+}
+
+.product{
+  position:absolute;
+  display:flex;
+  justify-content:center;
+  background-color: rgb(236, 221, 221);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.398);
+  width:200px;
+  height:300px;
+  margin: 10px;
+  border-radius: 10px;
+  border-style:solid;
+  border-width: 1px;
+  background-color:rgb(255, 230, 230);
+  transition: ease-out 0.5s;
+}
+
+.currProduct{
+    z-index:3;
+}
+
+.product-left{
+    transform: translateX(-150px) scale(0.8);
+  opacity: 0.7;
+  z-index: 2;
+}
+
+.product-right{
+     transform: translateX(150px) scale(0.8);
+  opacity: 0.7;
+  z-index: 2;
+}
+
+
+.product_image{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width:100%;
+  height:200px;
+  border-radius: 10px;
+  background-color:rgba(255, 255, 255, 0.733);
+  
+}
+
+.product_image:nth-child(1) {
+  clip-path: ellipse(400px 100% at top);
+}
+
+
+.product_image img{
+  width: 150px;
+  height: 150px;
+  border-radius:10px;
+}
+
+.product_info{
+  display:flex;
+  flex-direction:column;
+  position: absolute;
+  left: 50%;
+  top: 85%;
+  transform: translate(-50%, -50%);
+  justify-content:space-between;
+  align-items:center;
+  height: 90px;
+  width: 100%;
+  margin:0px;
+  
+}
+
+.product_name{
+  font-family: "Montserrat", sans-serif;
+  font-size:20px;
+  color: rgba(0, 0, 0, 0.912);
+  font-weight: 380;
+  letter-spacing: 1px;
+}
+
+.product_name p {
+    margin: 0;
+    padding: 0;
+}
+
+.heart svg{
+  margin: 0px;
+  padding: 0px;
+  height: 20px;
+  fill:rgb(222, 165, 175);
+}
+
+.heart{
+  color: rgb(222, 165, 175);
+}
+
+.product_price{
+  font-size:20px;
+  font-family:'Times New Roman', Times, serif;
+  color:rgb(222, 165, 175);
+}
