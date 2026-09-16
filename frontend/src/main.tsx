@@ -1,13 +1,16 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import ProductCarousel from './ProductCarousel.tsx'
+import "./index.css";
+import App from './App.tsx'
 
-const productCarouselRoot = document.getElementById('product-carousel-root')
+const root = document.getElementById('root')
 
-if (productCarouselRoot) {
-  createRoot(productCarouselRoot).render(
+
+
+if (root) 
+  createRoot(root).render(
     <StrictMode>
-      <ProductCarousel />
+      <App/>
     </StrictMode>,
   )
-}
+
