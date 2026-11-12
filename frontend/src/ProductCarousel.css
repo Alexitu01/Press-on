@@ -19,11 +19,11 @@
   display:flex;
   justify-content:center;
   align-items:center;
-  width: 80px;
-  height:80px;
+  width: 75px;
+  height:75px;
   border-radius:50%;
   border-style:none;
-  color:pink;
+  background-color:rgb(255, 255, 255);
   z-index:900;
 }
 
@@ -35,10 +35,11 @@
   left: 15px;
 }
 .next:hover, .prev:hover{
-  background-color:rgba(255, 255, 255, 0.596);
+  background-color:rgb(255, 255, 255);
   border-style:solid;
   border-width:1px;
-  border-color:rgb(236, 221, 221)
+  border-color:rgb(236, 221, 221);
+  cursor:pointer;
 }
 
 button:active{
@@ -148,6 +149,10 @@ button:active{
 }
 
 .heart{
+  display:flex;
+  align-items:center;
+  flex-direction:row;
+  gap:4px;
   color: rgb(222, 165, 175);
 }
 
@@ -155,4 +160,8 @@ button:active{
   font-size:20px;
   font-family:'Times New Roman', Times, serif;
   color:rgb(222, 165, 175);
+}
+
+.product_price p{
+  margin-top:0px;
 }

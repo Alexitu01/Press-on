@@ -1,3 +1,4 @@
 obj/
 bin/
 .DS_Store
+app/wwwroot/.DS_Store

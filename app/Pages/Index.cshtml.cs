@@ -6,14 +6,14 @@ using Repositories;
 
 namespace app.Pages;
 
-public class IndexModel(ProductRepository pr) : PageModel
+public class IndexModel(/*ProductRepository pr*/) : PageModel
 {
-    private readonly ProductRepository _pr = pr;
+    //private readonly ProductRepository _pr = pr;
 
     public List<Product> productList = new List<Product>();
 
     public async Task OnGet()
     {
-        productList = await _pr.GetAllProducts();
+        //productList = await _pr.GetAllProducts();
     }
 }

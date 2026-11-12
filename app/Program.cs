@@ -7,13 +7,14 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorPages();
 
+/*
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
 builder.Services.AddDbContext<AppDbContext>(options => options.UseNpgsql(connectionString));
+*/
+//builder.Services.AddScoped<ProductRepository>();
 
-builder.Services.AddScoped<ProductRepository>();
 
-Console.WriteLine(connectionString is null ? "Didn't work" : "Did work!");
 
 var app = builder.Build();
 
