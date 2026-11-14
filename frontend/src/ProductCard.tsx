@@ -1,9 +1,10 @@
 
 import type { NailSet } from "../src/models/Nailset.ts";
+import { Link } from 'react-router'
 
 const ProductCard = (prop:NailSet) => {
   return (
-    <>
+    <Link to={`/products/${prop.id}`}>
       <div className="product_image">
         <img src={prop.imageUrl} alt={prop.name} />
       </div>
@@ -37,7 +38,7 @@ const ProductCard = (prop:NailSet) => {
           <p>€{prop.price}</p>
         </div>
       </div>
-    </>
+    </Link>
   );
 };
 

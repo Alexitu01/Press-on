@@ -38,11 +38,11 @@ function ProductCarousel({ products }: ProductProps) {
       >
         <img src="src/assets/arrow.png" alt="Previous" />
       </button>
-
       {products.map((product, index) => (
         <div key={product.id} className="product" style={getProductPosition(index)}>
           <ProductCard id={product.id} name={product.name} imageUrl={product.imageUrl} price={product.price}/>
         </div>
+        
       ))}
 
       <button
